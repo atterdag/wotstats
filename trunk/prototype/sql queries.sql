@@ -43,14 +43,21 @@ CREATE TABLE info_statistics_all
   losses integer,
   draws int,
   survived_battles int,
+  tanking_factor numeric,
   base_xp int,
   xp int,
-  tanking_factor numeric,
+  battle_avg_xp int,
+  avg_damage_blocked numeric,
+  avg_damage_assisted numeric,
+  avg_damage_assisted_track numeric,
+  avg_damage_assisted_radio numeric,
+  hits_percents int,
   frags int,
   spotted integer,
+  capture_points int,
+  dropped_capture_points int,
   shots int,
   hits int,
-  hits_percents int,
   piercings int,
   explosion_hits int,
   no_damage_direct_hits_received int,
@@ -59,13 +66,6 @@ CREATE TABLE info_statistics_all
   direct_hits_received int,
   piercings_received int,
   explosion_hits_received int,
-  capture_points int,
-  dropped_capture_points int,
-  battle_avg_xp int,
-  avg_damage_blocked numeric,
-  avg_damage_assisted numeric,
-  avg_damage_assisted_track numeric,
-  avg_damage_assisted_radio numeric,
   CONSTRAINT account_info_global_pkey PRIMARY KEY (account_id)
 )
 WITH (
@@ -74,4 +74,4 @@ WITH (
 ALTER TABLE info_statistics_max
   OWNER TO wotstatsadmins;
 ---
-  
+ 
