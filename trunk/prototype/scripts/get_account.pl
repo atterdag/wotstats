@@ -46,11 +46,11 @@ sub set_account {
 
 	our($stmt);
 	if ( $count eq 0 ) {
-		$stmt = 'INSERT INTO public.accounts ( account_id, nickname )
+		$stmt = 'INSERT INTO public.account ( account_id, nickname )
                   VALUES (\'' . $account_id . '\',
                           \'' . $nickname . '\')';
 	} elsif ( $count eq 1 ) {
-		$stmt = 'UPDATE public.accounts
+		$stmt = 'UPDATE public.account
                   SET account_id=\'' . $account_id . '\',
                       nickname=\''   . $nickname . '\'
                   WHERE account_id=\'' . $account_id . '\'';
