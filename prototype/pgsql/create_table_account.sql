@@ -1,15 +1,15 @@
 -- Table: accounts
 
--- DROP TABLE accounts;
+-- DROP TABLE account;
 
-CREATE TABLE accounts
+CREATE TABLE account
 (
   account_id integer NOT NULL,
   nickname character(256),
-  CONSTRAINT account_id PRIMARY KEY (account_id)
+  CONSTRAINT account_global_pkey PRIMARY KEY (account_id)
 )
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE accounts
+ALTER TABLE account
   OWNER TO wotstatsadmins;
