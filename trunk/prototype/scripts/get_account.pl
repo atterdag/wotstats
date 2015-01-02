@@ -38,7 +38,7 @@ sub set_account {
 	my $SQL = 'SELECT ?::text';
 	$dbh->do($SQL, undef, "DBD::Pg version $DBD::Pg::VERSION");
 
-	my $count_stmt = 'SELECT COUNT(*) FROM public.accounts WHERE account_id=\'' . $account_id . '\'';
+	my $count_stmt = 'SELECT COUNT(*) FROM public.account WHERE account_id=\'' . $account_id . '\'';
 	my $count = $dbh->selectrow_array( $count_stmt );
 	if ($dbh->err()){
 		die $count_stmt . ' failed : ' . $dbh->errstr();
