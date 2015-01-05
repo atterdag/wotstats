@@ -54,7 +54,7 @@ sub set_expected_tank_values {
     my $expWinRate = $_[5];
     my $countryid = $_[6];
     my $tankid = $_[7];
-    
+        
     my $SQL = 'SELECT ?::text';
     $dbh->do($SQL, undef, "DBD::Pg version $DBD::Pg::VERSION");
     
@@ -75,6 +75,7 @@ sub set_expected_tank_values {
                           \'' . $expWinRate . '\',
                           \'' . $countryid . '\',
                           \'' . $tankid . '\')';
+        print "setting expected tank values for: " . $IDNum . "\n";
     } elsif ( $count eq 1 ) {
         $stmt = 'UPDATE public.expected_tank_values_'. $version . '
                   SET expFrag=\''    . $expFrag . '\',
@@ -85,6 +86,7 @@ sub set_expected_tank_values {
                       countryid=\''  . $countryid . '\',
                       tankid=\''     . $tankid . '\'
                   WHERE IDNum=\'' . $IDNum . '\'';
+	    print "updating expected tank values for: " . $IDNum . "\n";
     }
     
     my $rv = $dbh->do( $stmt ) || die $DBI::errstr;
