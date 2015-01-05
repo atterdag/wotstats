@@ -1,6 +1,7 @@
 #!/usr/bin/perl
 
 use strict;
+use warnings;
 use HTTP::Tiny;
 use JSON;
 use DBI;
@@ -49,11 +50,12 @@ sub set_account {
 		$stmt = 'INSERT INTO public.account ( account_id, nickname )
                   VALUES (\'' . $account_id . '\',
                           \'' . $nickname . '\')';
+        print "setting account for: " . $account_id . "\n";
 	} elsif ( $count eq 1 ) {
 		$stmt = 'UPDATE public.account
-                  SET account_id=\'' . $account_id . '\',
-                      nickname=\''   . $nickname . '\'
+                  SET nickname=\''   . $nickname . '\'
                   WHERE account_id=\'' . $account_id . '\'';
+        print "updating account for: " . $account_id . "\n";
 	}
 
 	my $rv = $dbh->do( $stmt ) || die $DBI::errstr;
