@@ -2,7 +2,7 @@
 
 -- DROP TABLE info_statistics_all;
 
-CREATE TABLE info_statistics_all
+CREATE TABLE account_info_statistics_all
 (
   account_id integer NOT NULL,
   battles integer,
@@ -33,10 +33,10 @@ CREATE TABLE info_statistics_all
   direct_hits_received integer,
   piercings_received integer,
   explosion_hits_received integer,
-  CONSTRAINT info_statistics_all_global_pkey PRIMARY KEY (account_id)
+  CONSTRAINT account_info_statistics_all_global_pkey PRIMARY KEY (account_id)
 )
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE info_statistics_all
+ALTER TABLE account_info_statistics_all
   OWNER TO wotstatsadmins;
