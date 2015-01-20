@@ -2,7 +2,7 @@
 
 -- DROP TABLE info_common;
 
-CREATE TABLE info_common
+CREATE TABLE account_info_common
 (
   account_id integer NOT NULL,
   clan_id integer,
@@ -12,10 +12,10 @@ CREATE TABLE info_common
   updated_at timestamp without time zone,
   last_battle_time timestamp without time zone,
   logout_at timestamp without time zone,
-  CONSTRAINT info_common_global_pkey PRIMARY KEY (account_id)
+  CONSTRAINT account_info_common_global_pkey PRIMARY KEY (account_id)
 )
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE info_common
+ALTER TABLE account_info_common
   OWNER TO wotstatsadmins;
