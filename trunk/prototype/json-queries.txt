@@ -7,10 +7,16 @@ http://api.worldoftanks.eu/2.0/stats/accountbytime/?application_id=d0a293dc77667
 
 
 
+http://api.worldoftanks.eu/wot/account/list/?application_id=d0a293dc77667c9328783d489c8cef73&search=atterdag
+http://api.worldoftanks.eu/wot/account/info/?application_id=d0a293dc77667c9328783d489c8cef73&account_id=500363634
+http://api.worldoftanks.eu/wot/account/tanks/?application_id=d0a293dc77667c9328783d489c8cef73&account_id=500363634
+http://api.worldoftanks.eu/wot/tanks/stats/?application_id=d0a293dc77667c9328783d489c8cef73&account_id=500363634
+
+http://api.worldoftanks.eu/wot/encyclopedia/tanks/?application_id=d0a293dc77667c9328783d489c8cef73
+
+
 
 http://api.worldoftanks.eu/2.0/account/list/?application_id=d0a293dc77667c9328783d489c8cef73&search=att
 alpha
 numeric
 underscore
-
-
