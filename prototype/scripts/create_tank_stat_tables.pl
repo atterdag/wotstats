@@ -109,6 +109,7 @@ CREATE TABLE tank_stats_' . $tank_id . '_' . $type .' (
   damage_received integer,
   dropped_capture_points integer,
   hits_percents integer,
+  wn8 integer,
   CONSTRAINT tank_stats_' . $tank_id . '_' . $type .'_global_pkey PRIMARY KEY (account_id, tank_id)
 )
 WITH (

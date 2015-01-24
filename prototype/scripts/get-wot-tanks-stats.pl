@@ -100,7 +100,7 @@ sub set_tanks_common {
                           ' . $tanks_common{'frags'} . ',
                           ' . $tanks_common{'mark_of_mastery'} . ',
                           ' . $tanks_common{'in_garage'} . ')';
-        print "inserting into tank_stats_' . $tanks_common{'tank_id'} . '_common for: " . $tanks_common{'account_id'} . "\n";
+        print 'inserting into tank_stats_' . $tanks_common{'tank_id'} . '_common for: ' . $tanks_common{'account_id'} . "\n";
     } elsif ( $count eq 1 ) {
         $stmt = 'UPDATE public.tank_stats_' . $tanks_common{'tank_id'} . '_common
                   SET max_xp='          . $tanks_common{'max_xp'} . ',
@@ -109,7 +109,7 @@ sub set_tanks_common {
                       mark_of_mastery=' . $tanks_common{'mark_of_mastery'} . ',
                       in_garage='       . $tanks_common{'in_garage'} . '
                   WHERE account_id=\'' . $tanks_common{'account_id'} . '\'';
-        print "updating statistics for " . $tanks_common{'account_id'} . ' in tank_stats_' . $tanks_common{'tank_id'} . '_commo' . "\n";
+        print 'updating tank_stats_' . $tanks_common{'tank_id'} . '_common for: ' . $tanks_common{'account_id'} . "\n";
     }
     my $rv = $dbh->do( $stmt ) || die $DBI::errstr;
     if ($dbh->err()){
